@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export const TopNavbar = () => {
   return (
-    <div className="bg-[#000F28] py-[9px] px-2 text-[12px] w-full flex justify-between items-center text-gray-300">
+    <div className="bg-[#000F28] sticky top-0 py-[9px] px-2 text-[12px] w-full flex justify-between items-center text-gray-300">
       <div className="flex items-center gap-[6px]">
         <BsGrid3X3Gap />
         <span className="ml-2">Dynamics 365</span>

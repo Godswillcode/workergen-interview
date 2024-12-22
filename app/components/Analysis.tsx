@@ -5,6 +5,8 @@ import { CiClock2 } from "react-icons/ci";
 import janeAvatar from ".././images/avatarJane.png";
 import allanAvatar from ".././images/allanAvatar.png";
 import cafeAvatar from ".././images/cafeAvatar.png";
+import FKAvatar from ".././images/FK.png";
+import sliderDot from ".././images/CaroselLine.png";
 import { BsEnvelopeArrowUp } from "react-icons/bs";
 import { BsStars } from "react-icons/bs";
 import { CgCalendarDates } from "react-icons/cg";
@@ -115,11 +117,7 @@ export const Analysis = () => {
 
               <div className="border shadow-sm p-2 rounded-md">
                 <div className="flex items-center gap-2">
-                  <Image
-                    src={allanAvatar}
-                    alt="jane avatar"
-                    className="h-8 w-8"
-                  />
+                  <Image src={allanAvatar} alt="avatar" className="h-8 w-8" />
                   <div>
                     <h4 className="font-semibold">Allan Munger</h4>
                     <p className="text-gray-500">
@@ -156,12 +154,82 @@ export const Analysis = () => {
                 <p>Upcoming coming . Due today</p>
               </div>
             </div>
+
+            <div className="flex justify-center mt-9">
+              <Image src={sliderDot} alt="dots" height={7} />
+            </div>
           </div>
 
           <div className="flex gap-3">
             <div className="border" />
-            <div>
+            <div className="flex-1">
               <h4 className="pb-3">Other key activities</h4>
+
+              <div className="border rounded px-2 py-[5px]">
+                <div className="flex items-center gap-2">
+                  <Image src={cafeAvatar} alt="avatar" className="h-8 w-8" />
+                  <div>
+                    <h4 className="font-semibold">
+                      Cafe A100 for Woodland Bank
+                    </h4>
+                    <p className="text-gray-500">
+                      Woodland Bank . $280,000 . 8 days close
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-[#EFEFEF] flex justify-between items-center mt-2 pl-2  mb-2 rounded text-[#2C445D]">
+                  <div className="flex items-center gap-2">
+                    <BsEnvelopeArrowUp size={13} />
+                    <span className="font-semibold">
+                      Review draft and reply to Chris Naido
+                    </span>
+                  </div>
+
+                  <div className="flex justify-center">
+                    <BsStars
+                      color="#325BC9"
+                      className="bg-white p-1 -mr-1 h-6 w-6 rounded-full flex items-center justify-center"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* last */}
+
+              <div className="border rounded px-2 py-[5px] mt-2 mb-2">
+                <div className="flex items-center gap-2">
+                  <Image src={FKAvatar} alt="jane avatar" className="h-7 w-7" />
+                  <div>
+                    <h4 className="font-semibold">
+                      Partnership opportunity for Fabrikam
+                    </h4>
+                    <p className="text-gray-500">
+                      Fabrikam's . $5,000,000 . 12 days close
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-[#EFEFEF] flex justify-between items-center mt-2 pl-2  mb-2 rounded text-[#2C445D]">
+                  <div className="flex items-center gap-2">
+                    <CgCalendarDates size={13} />
+                    <span className="font-semibold">
+                      Prepare for me Fabrikam's Key stakeholder meeting
+                    </span>
+                  </div>
+
+                  <div className="flex justify-center">
+                    <BsStars
+                      color="#325BC9"
+                      className="bg-white p-1 -mr-1 h-6 w-6 rounded-full flex items-center justify-center"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <span className="text-[#325BC9] hover:text-black cursor-pointer font-semibold">
+                Show all key activities
+              </span>
             </div>
           </div>
         </div>
