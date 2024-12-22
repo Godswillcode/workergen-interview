@@ -16,7 +16,7 @@ export default function Home() {
           <SideBar isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
 
-        <div className={isOpen ? "w-full lg:ml-[10rem] pb-10" : "lg:ml-16 pb-10 w-full"}>
+        <div className={isOpen ? "w-full lg:ml-[12rem] pb-10" : "lg:ml-16 pb-10 w-full"}>
           <MainPage />
         </div>
       </div>

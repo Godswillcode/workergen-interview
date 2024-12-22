@@ -1,5 +1,5 @@
 .navLinkWrap {
-  @apply flex  justify-between mb-3 cursor-pointer hover:text-[#325BC9];
+  @apply flex  justify-between mb-2 cursor-pointer hover:text-[#325BC9];
 }
 
 .navLink {
@@ -7,15 +7,15 @@
 }
 
 .navIcon {
-  @apply text-[14px];
+  @apply text-[13px];
 }
 
 .navIconArrowDown {
-  @apply text-[12px];
+  @apply text-[11px];
 }
 
 .navLink span {
-  @apply text-[12px];
+  @apply text-[11px];
 }
 
 .sidebar {
@@ -23,5 +23,5 @@
 }
 
 .sidebar h2 {
-  @apply text-[13px] font-semibold mt-2;
+  @apply text-[12px] font-semibold mt-5 mb-2;
 }
