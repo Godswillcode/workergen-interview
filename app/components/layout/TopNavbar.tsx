@@ -1,9 +1,10 @@
 
 import { BsGrid3X3Gap } from "react-icons/bs";
 import { HiOutlineLightBulb } from "react-icons/hi2";
-import { FaPlus } from "react-icons/fa6";
 import { FiSettings } from "react-icons/fi";
-import { FaQuestion, FaChalkboardUser } from "react-icons/fa6";
+import { FaQuestion, FaChalkboardUser, FaPlus } from "react-icons/fa6";
+import userAvatar from "../../images/topNavUser.png"
+import Image from "next/image";
 
 export const TopNavbar = () => {
   return (
@@ -14,13 +15,13 @@ export const TopNavbar = () => {
         <span className="text-gray-400">|</span>
         <span>Sales hub</span>
       </div>
-      <div className="flex items-center gap-[6px]">
+      <div className="flex items-center gap-4">
       <HiOutlineLightBulb />
       <FaPlus />
       <FiSettings />
       <FaQuestion />
       <FaChalkboardUser />
-      <img src="" alt="user" />
+      <Image src={userAvatar} alt="" className="h-5 w-5"/>
       </div>
     </div>
   )
