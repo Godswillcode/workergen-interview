@@ -19,7 +19,11 @@ import {
 } from "react-icons/gr";
 import { FiPackage } from "react-icons/fi";
 import { GiVendingMachine } from "react-icons/gi";
-export const SideBar = () => {
+
+interface IShowMenuIcon {
+  show: boolean;
+}
+export const SideBar = ({ show }: IShowMenuIcon) => {
   const [api, contextHolder] = notification.useNotification();
 
   const openNotification = () => {
@@ -34,10 +38,11 @@ export const SideBar = () => {
       {" "}
       {contextHolder}
       <div
-        className={`h-screen shadow-sm overflow-y-auto pb-14 pt-2  bg-[#EFEFEF] border-r text-[#2C445D] sidebar w-[180px]`}>
-        <div className="px-2">
+        className={`h-screen shadow-sm overflow-y-auto pb-14 pt-2  bg-[#EFEFEF] border-r text-[#2C445D] sidebar w-[180px]`}
+      >
+       {show && <div className="px-2">
           <VscMenu className="cursor-pointer hover:text-[#325BC9]" />
-        </div>
+        </div>}
 
         <div className="navLinkWrap mt-4" onClick={openNotification}>
           <div className="navLink">
@@ -56,7 +61,7 @@ export const SideBar = () => {
           </div>
           <SlArrowDown className="navIconArrowDown" />
         </div>
-         <h2>My work</h2>
+        <h2>My work</h2>
         <div className="navLinkWrap" onClick={openNotification}>
           <div className="navLink">
             <LuRocket className="navIcon" /> <span>Sales Accelerator</span>
@@ -72,7 +77,7 @@ export const SideBar = () => {
             <TbBucket className="navIcon" /> <span>Activities</span>
           </div>
         </div>
-       <h2>Customers</h2>
+        <h2>Customers</h2>
         <div className="navLinkWrap" onClick={openNotification}>
           <div className="navLink">
             <PiFolders className="navIcon" /> <span>Accounts</span>
@@ -83,7 +88,7 @@ export const SideBar = () => {
             <BiUser className="navIcon" /> <span>Contacts</span>
           </div>
         </div>
-      <h2>Sales</h2>
+        <h2>Sales</h2>
         <div className="navLinkWrap bg-white" onClick={openNotification}>
           <div className="navLink py-[5px]">
             <div className="flex items-center gap-[3px]">
@@ -104,7 +109,7 @@ export const SideBar = () => {
           </div>
         </div>
 
-         <h2>Collateral</h2>
+        <h2>Collateral</h2>
         <div className="navLinkWrap" onClick={openNotification}>
           <div className="navLink">
             <GrDocumentTime className="navIcon" /> <span>Quotes</span>
@@ -131,7 +136,7 @@ export const SideBar = () => {
             <span>Sales Literature</span>
           </div>
         </div>
-       <h2>Marketing</h2>
+        <h2>Marketing</h2>
         <div className="navLinkWrap" onClick={openNotification}>
           <div className="navLink">
             <GiVendingMachine className="navIcon" />{" "}
@@ -144,11 +149,11 @@ export const SideBar = () => {
             <span>Sales Literature</span>
           </div>
         </div>
-     
-          <h3 className="text-[12px] font-semibold mt-5 px-2 pb-1">
-            Performance
-          </h3>
-       
+
+        <h3 className="text-[12px] font-semibold mt-5 px-2 pb-1">
+          Performance
+        </h3>
+
         <div className="flex items-center justify-between py-1 px-2 text-sm border border-gray-300">
           <div className="flex items-center gap-2">
             <div className="bg-[#624783] px-2 text-white">s</div>{" "}

@@ -13,7 +13,7 @@ export default function Home() {
 
       <div className="flex w-full relative">
         <div className={`w-[14rem] fixed z-40 overflow-hidden lg:flex hidden`}>
-          <SideBar />
+          <SideBar show={true}/>
         </div>
 
         <div className="w-full lg:ml-[11.5rem] pb-10">
