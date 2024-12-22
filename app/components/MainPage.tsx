@@ -5,11 +5,11 @@ import { SidebarRight } from "./layout/SidebarRight";
 
 export const MainPage = () => {
   return (
-    <div className="px-5 bg-red-600">
+    <div className="px-2 mt-3">
       <Navbar />
-     
+
       <div>
-  
+
       </div>
     </div>
   );

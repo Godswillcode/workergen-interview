@@ -17,10 +17,10 @@ export default function Home() {
           <SideBar isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
 
-        <div className={isOpen ? "w-full lg:ml-[11rem] lg:mr-[0.5rem] pb-10" : "lg:ml-16 pb-10 w-full"}>
+        <div className={isOpen ? "w-full lg:ml-[11.5rem] pb-10" : "lg:ml-16 pb-10 w-full"}>
           <MainPage />
         </div>
-        <div className={`w-[5rem] overflow-hidden lg:flex hidden`}>
+        <div className={`w-[3rem] overflow-hidden lg:flex hidden`}>
         <SidebarRight />
         </div>
       </div>
