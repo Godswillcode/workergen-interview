@@ -25,8 +25,8 @@ export const SideBar = ({ isOpen, setIsOpen }: SidebarProps) => {
 
   const openNotification = () => {
     api.info({
-      message: "Information",
-      description: "Page coming soon.",
+      message: "Info",
+      description: "Page coming soon...",
       placement: "top",
     });
   };
@@ -152,7 +152,7 @@ export const SideBar = ({ isOpen, setIsOpen }: SidebarProps) => {
         <div className="flex items-center justify-between py-1 px-2 text-sm border border-gray-300">
           <div className="flex items-center gap-2">
             <div className="bg-[#624783] px-2 text-white">s</div>{" "}
-            <span>Sales</span>
+            <span className="text-xs">Sales</span>
           </div>
           <BiExpandVertical />
         </div>
