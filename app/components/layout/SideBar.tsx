@@ -38,7 +38,7 @@ export const SideBar = ({ show }: IShowMenuIcon) => {
       {" "}
       {contextHolder}
       <div
-        className={`h-screen shadow-sm overflow-y-auto pb-14 pt-2  bg-[#EFEFEF] border-r text-[#2C445D] sidebar w-[180px]`}
+        className={`h-screen shadow-sm overflow-y-auto pb-14 pt-2  bg-[#EFEFEF] border-r text-[#2C445D] sidebar w-[168px]`}
       >
        {show && <div className="px-2">
           <VscMenu className="cursor-pointer hover:text-[#325BC9]" />

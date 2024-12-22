@@ -16,7 +16,7 @@ export default function Home() {
           <SideBar show={true}/>
         </div>
 
-        <div className="w-full lg:ml-[11.5rem] pb-10">
+        <div className="w-full lg:ml-[11rem] pb-10">
           <MainPage />
         </div>
         <div className={`w-[3rem] overflow-hidden lg:flex hidden`}>
