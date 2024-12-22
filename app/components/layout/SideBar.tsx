@@ -7,11 +7,18 @@ import { SlArrowDown } from "react-icons/sl";
 import { BsPinAngle } from "react-icons/bs";
 import { notification } from "antd";
 import { LuRocket } from "react-icons/lu";
-import { TbMathSymbols, TbBucket  } from "react-icons/tb"
+import { TbMathSymbols, TbBucket } from "react-icons/tb";
 import { MdOutlineSettingsPhone } from "react-icons/md";
 import { PiDoorOpenDuotone, PiFolders } from "react-icons/pi";
 import { TbUserQuestion } from "react-icons/tb";
-import { BiUser } from "react-icons/bi";
+import { BiUser, BiExpandVertical } from "react-icons/bi";
+import {
+  GrDocumentTime,
+  GrDocumentText,
+  GrDocumentStore,
+} from "react-icons/gr";
+import { FiPackage } from "react-icons/fi";
+import { GiVendingMachine } from "react-icons/gi";
 export const SideBar = ({ isOpen, setIsOpen }: SidebarProps) => {
   const toggle = () => setIsOpen(!isOpen);
   const [api, contextHolder] = notification.useNotification();
@@ -28,11 +35,13 @@ export const SideBar = ({ isOpen, setIsOpen }: SidebarProps) => {
       {" "}
       {contextHolder}
       <div
-        className={`h-screen px-2 pb-5 pt-3 bg-[#EFEFEF] border-r text-[#2C445D] sidebar ${
+        className={`h-screen shadow-sm overflow-y-auto pb-14 pt-2  bg-[#EFEFEF] border-r text-[#2C445D] sidebar ${
           isOpen ? "w-[180px]" : "w-[30px]"
         }`}
       >
-        <VscMenu />
+        <div className="px-2">
+        <VscMenu/>
+        </div>
         {/* onClick={toggle} */}
 
         <div className="navLinkWrap mt-4" onClick={openNotification}>
@@ -81,8 +90,11 @@ export const SideBar = ({ isOpen, setIsOpen }: SidebarProps) => {
         </div>
         <h2>Sales</h2>
         <div className="navLinkWrap bg-white" onClick={openNotification}>
-          <div className="navLink">
-            <MdOutlineSettingsPhone className="navIcon" /> <span>Leads</span>
+          <div className="navLink py-[5px]">
+           <div className="flex items-center gap-[3px]">
+            <div className="h-[15px] w-[2.4px] rounded text-base bg-[#325BC9]"/>
+           <MdOutlineSettingsPhone className="navIcon" />
+            </div> <span>Leads</span>
           </div>
         </div>
         <div className="navLinkWrap" onClick={openNotification}>
@@ -94,6 +106,55 @@ export const SideBar = ({ isOpen, setIsOpen }: SidebarProps) => {
           <div className="navLink">
             <TbUserQuestion className="navIcon" /> <span>Competitors</span>
           </div>
+        </div>
+
+        <h2>Collateral</h2>
+        <div className="navLinkWrap" onClick={openNotification}>
+          <div className="navLink">
+            <GrDocumentTime className="navIcon" /> <span>Quotes</span>
+          </div>
+        </div>
+        <div className="navLinkWrap" onClick={openNotification}>
+          <div className="navLink">
+            <GrDocumentText className="navIcon" /> <span>Orders</span>
+          </div>
+        </div>
+        <div className="navLinkWrap" onClick={openNotification}>
+          <div className="navLink">
+            <GrDocumentStore className="navIcon" /> <span>Invoices</span>
+          </div>
+        </div>
+        <div className="navLinkWrap" onClick={openNotification}>
+          <div className="navLink">
+            <FiPackage className="navIcon" /> <span>Products</span>
+          </div>
+        </div>
+        <div className="navLinkWrap" onClick={openNotification}>
+          <div className="navLink">
+            <GiVendingMachine className="navIcon" />{" "}
+            <span>Sales Literature</span>
+          </div>
+        </div>
+        <h2>Marketing</h2>
+        <div className="navLinkWrap" onClick={openNotification}>
+          <div className="navLink">
+            <GiVendingMachine className="navIcon" />{" "}
+            <span>Sales Literature</span>
+          </div>
+        </div>
+        <div className="navLinkWrap" onClick={openNotification}>
+          <div className="navLink">
+            <GiVendingMachine className="navIcon" />{" "}
+            <span>Sales Literature</span>
+          </div>
+        </div>
+        <h3 className="text-[12px] font-semibold mt-5 px-2 pb-1">Performance</h3>
+        <div className="flex items-center justify-between py-1 px-2 text-sm border border-gray-300">
+          <div className="flex items-center gap-2">
+            <div className="bg-[#624783] px-2 text-white">s</div>{" "}
+            <span>Sales</span>
+          </div>
+          <BiExpandVertical />
         </div>
       </div>
     </>

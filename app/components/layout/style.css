@@ -1,5 +1,5 @@
 .navLinkWrap {
-  @apply flex  justify-between mb-2 cursor-pointer hover:text-[#325BC9];
+  @apply flex px-2 justify-between mb-2 cursor-pointer hover:text-[#325BC9];
 }
 
 .navLink {
@@ -23,5 +23,20 @@
 }
 
 .sidebar h2 {
-  @apply text-[12px] font-semibold mt-5 mb-2;
+  @apply text-[12px] font-semibold mt-5 mb-2 px-2;
 }
+
+/* Hide scrollbar for WebKit browsers (Chrome, Safari, Edge) */
+.sidebar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for Firefox */
+  .sidebar {
+    scrollbar-width: none; /* For Firefox */
+  }
+  
+  /* Hide scrollbar for older browsers using overflow */
+  .sidebar {
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  }
