@@ -15,8 +15,12 @@ import { TiMessages } from "react-icons/ti";
 import { MdOutlineCall } from "react-icons/md";
 import { FaRegMessage } from "react-icons/fa6";
 import { BsPrinter } from "react-icons/bs";
+import { useState } from "react";
+import { Drawer } from 'antd';
+import { SideBar } from "./SideBar";
 
 export const Navbar = () => {
+    const [openDrawer, setOpenDrawer] = useState(false)
   const quickStyle = "flex items-center hover:text-[#325BC9] gap-[4px] cursor-pointer";
 
   const menuItems: MenuProps["items"] = [
@@ -52,6 +56,7 @@ export const Navbar = () => {
   ];
 
   return (
+    <>
     <div className="bg-white px-2 py-[6px] flex justify-between items-center rounded text-[11px]">
       <div className={quickStyle}>
         <span>My open leads</span>
@@ -133,5 +138,10 @@ export const Navbar = () => {
         </Dropdown>
       </div>
     </div>
+
+    <Drawer title="Menu" onClose={() => setOpenDrawer(false)} open={openDrawer}>
+       {/* <SideBar /> */}
+    </Drawer>
+    </>
   );
 };

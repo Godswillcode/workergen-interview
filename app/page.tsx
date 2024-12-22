@@ -7,21 +7,20 @@ import { MainPage } from "./components/MainPage";
 import { SidebarRight } from "./components/layout/SidebarRight";
 
 export default function Home() {
-  const [isOpen, setIsOpen] = useState(true);
   return (
     <div>
       <TopNavbar />
 
       <div className="flex w-full relative">
         <div className={`w-[14rem] fixed z-40 overflow-hidden lg:flex hidden`}>
-          <SideBar isOpen={isOpen} setIsOpen={setIsOpen} />
+          <SideBar />
         </div>
 
-        <div className={isOpen ? "w-full lg:ml-[11.5rem] pb-10" : "lg:ml-16 pb-10 w-full"}>
+        <div className="w-full lg:ml-[11.5rem] pb-10">
           <MainPage />
         </div>
         <div className={`w-[3rem] overflow-hidden lg:flex hidden`}>
-        <SidebarRight />
+          <SidebarRight />
         </div>
       </div>
     </div>
