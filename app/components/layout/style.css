@@ -1,0 +1,15 @@
+.navLinkWrap {
+    @apply flex text-sm justify-between;
+}
+
+.navLink {
+    @apply flex items-center gap-2;
+}
+
+.navIcon {
+    @apply text-[15px];
+}
+
+.navIcon span{
+    @apply text-[15px];
+}
