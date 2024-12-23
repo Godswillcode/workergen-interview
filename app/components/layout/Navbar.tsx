@@ -19,7 +19,11 @@ import { useState } from "react";
 import { Drawer } from "antd";
 import { SideBar } from "./SideBar";
 
-export const Navbar = () => {
+
+export interface toggleViewProps {
+  setShowChartView: (showChartView: string) => void;
+}
+export const Navbar = ({setShowChartView}: toggleViewProps ) => {
   const [openDrawer, setOpenDrawer] = useState(false);
   const quickStyle =
     "flex items-center hover:text-[#325BC9] gap-[4px] cursor-pointer";
@@ -82,11 +86,11 @@ export const Navbar = () => {
         </div>
 
         <div className="lg:flex hidden items-center gap-3 ">
-          <div className={quickStyle}>
+          <div className={quickStyle} onClick={() => setShowChartView("showChat")}>
             <TbGraph size={15} />
             <span>Show chart</span>
           </div>
-          <div className={quickStyle}>
+          <div className={quickStyle} onClick={() => setShowChartView("focusedView")}>
             <TfiMenuAlt />
             <span>Focused view</span>
           </div>

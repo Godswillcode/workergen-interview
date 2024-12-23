@@ -85,7 +85,7 @@ export const AgentSkill = ({ open, handleClose }: IModalProp) => {
           Allow the agent to access email inboxes to mail from known vendors
         </p>
 
-        <div className="flex items-center gap-3">
+        <div className="flex sm:items-center sm:flex-row flex-col gap-3">
           <Dropdown
             trigger={["click"]}
             overlay={
