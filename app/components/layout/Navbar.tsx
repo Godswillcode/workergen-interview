@@ -34,8 +34,8 @@ export const Navbar = ({setShowChartView, showChartView}: toggleViewProps ) => {
       key: "submenu",
       label: "Navbar Links",
       children: [
-        { key: "1", label: "Show chart" },
-        { key: "2", label: "Focused view" },
+        { key: "1", label: <span className={showChartView === "showChat" ? "text-[#325BC9]": ""} onClick={() => setShowChartView("showChat")}>Show chart</span> },
+        { key: "2", label: <span className={showChartView === "focusedView" ? "text-[#325BC9]": ""}  onClick={() => setShowChartView("focusedView")}>Focused view</span> },
         { key: "3", label: "New" },
         { key: "4", label: "Refresh" },
         { key: "5", label: "Collaborate" },
