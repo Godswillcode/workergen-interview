@@ -4,21 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
-  --background: #EFEFEF;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #efefef;
 }
 
 body {
-  color: var(--foreground);
   background: var(--background);
   font-family: "Poppins", sans-serif;
 }
@@ -31,11 +21,11 @@ html {
 }
 
 html {
-  -ms-overflow-style: none; 
+  -ms-overflow-style: none;
 }
 
 .gradient-text {
-  background: linear-gradient(to right, #325BC9, #8049D2);
+  background: linear-gradient(to right, #325bc9, #8049d2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline;
