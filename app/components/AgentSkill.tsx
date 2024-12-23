@@ -1,4 +1,4 @@
-import { Modal } from "antd";
+import { Dropdown, Modal, Select } from "antd";
 import { IModalProp } from "../types";
 import anaLysisLogo from "../images/logoAnalysis.png";
 import Image from "next/image";
@@ -9,6 +9,7 @@ import { TbMenu4 } from "react-icons/tb";
 import { LiaShareSquareSolid } from "react-icons/lia";
 import outlookLogo from "../images/outlook-logo.png";
 import { LiaTimesSolid } from "react-icons/lia";
+import { emailOptions } from "../constant";
 
 export const AgentSkill = ({ open, handleClose }: IModalProp) => {
   return (
@@ -40,7 +41,7 @@ export const AgentSkill = ({ open, handleClose }: IModalProp) => {
           </div>
 
           <div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center flex-wrap gap-2">
               When{" "}
               <div className="flex gap-1 items-center bg-[#F1F5FF] rounded-lg pb-[1px] px-2 text-[#2893c4]">
                 <CiUser /> <span>any vendor</span>{" "}
@@ -52,7 +53,7 @@ export const AgentSkill = ({ open, handleClose }: IModalProp) => {
               , check if the resulting
             </div>
 
-            <div className="flex items-center gap-2 my-2">
+            <div className="flex items-center flex-wrap gap-2 my-2">
               <div className="flex gap-1 items-center bg-[#F1F5FF] rounded-lg pb-[1px] px-2 text-[#2893c4]">
                 <TbMenu4 /> <span>on-hold inventory</span>{" "}
               </div>
@@ -67,7 +68,7 @@ export const AgentSkill = ({ open, handleClose }: IModalProp) => {
               . if so,
             </div>
 
-            <div className="flex items-center gap-2 mt-2">
+            <div className="flex items-center flex-wrap gap-2 mt-2">
               <div className="flex gap-1 items-center bg-[#F1F5FF] rounded-lg pb-[1px] px-2 text-[#2893c4]">
                 <LiaShareSquareSolid /> <span>update the purchase order</span>{" "}
               </div>{" "}
@@ -85,16 +86,29 @@ export const AgentSkill = ({ open, handleClose }: IModalProp) => {
         </p>
 
         <div className="flex items-center gap-3">
-          <div className="rounded cursor-pointer border w-full shadow-sm flex items-center py-[4px] px-1">
-            <div className="bg-[#F1F5FF] items-center gap-1 pr-2 flex rounded-lg">
-              <span className="bg-red-100 h-[22px] w-[22px] rounded-full items-item flex justify-center">
-                p
-              </span>
-              <span>purchasing@contoso.com</span>
-              <span className="text-[#b7bdcd]">|</span>
-              <LiaTimesSolid size={17} className="pt-1" />
+          <Dropdown
+            trigger={["click"]}
+            overlay={
+              <Select
+                placeholder="Select email"
+                className="w-full"
+                options={emailOptions}
+                allowClear
+                mode="multiple"
+              />
+            }
+          >
+            <div className="rounded cursor-pointer border w-full shadow-sm flex items-center py-[4px] px-1">
+              <div className="bg-[#F1F5FF] items-center gap-1 pr-2 flex rounded-lg">
+                <span className="bg-red-100 h-[22px] w-[22px] rounded-full items-item flex justify-center">
+                  p
+                </span>
+                <span>purchasing@contoso.com</span>
+                <span className="text-[#b7bdcd]">|</span>
+                <LiaTimesSolid size={17} className="pt-1" />
+              </div>
             </div>
-          </div>
+          </Dropdown>
           <button className="bg-[#2164E0] w-[8rem] hover:bg-black rounded py-[6px] px-4 text-white">
             Allow access
           </button>

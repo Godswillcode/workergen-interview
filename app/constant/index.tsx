@@ -275,3 +275,11 @@ export const leadList: leadProps[] = [
   },
 ];
 
+
+export const emailOptions = [
+  { value: "purchasing@contoso.com", label: "purchasing@contoso.com" },
+  { value: "sales@contoso.com", label: "sales@contoso.com" },
+  { value: "support@contoso.com", label: "support@contoso.com" },
+  { value: "hr@contoso.com", label: "hr@contoso.com" },
+  { value: "it@contoso.com", label: "it@contoso.com" },
+];
