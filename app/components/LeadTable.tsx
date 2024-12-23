@@ -36,7 +36,7 @@ export const LeadTable = () => {
       ),
       dataIndex: "name",
       key: "name",
-      render: (_, val) => <Popover content={val.aboutMe} title="About me"><a className="text-[#3569a9]" onClick={() => handleGetLead(val)}>{val.name}</a></Popover>,
+      render: (_, val) => <Popover content={val.aboutMe} title={`About ${val.name}`}><a className="text-[#3569a9]" onClick={() => handleGetLead(val)}>{val.name}</a></Popover>,
 
     },
     {

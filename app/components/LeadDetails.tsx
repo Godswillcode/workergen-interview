@@ -21,6 +21,7 @@ interface IProps extends IModalProp {
 }
 
 export const LeadDetails = ({ open, handleClose, data }: IProps) => {
+
   return (
     <Modal
       open={open}
