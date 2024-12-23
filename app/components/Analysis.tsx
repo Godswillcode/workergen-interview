@@ -14,7 +14,7 @@ import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
 export const Analysis = () => {
   return (
-    <div className="relative text-[10px] shadow-xl mt-3 p-[1.3px] rounded-md bg-gradient-to-r from-[#9BA5FF] via-[#ce8178]  via-[#9BA5FF] via-[#62C4C3] to-[#ce8178] ">
+    <div className="relative text-[10px] shadow-xl mt-3 p-[1.3px] rounded-md bg-gradient-to-r from-[#9BA5FF] via-[#ce8178]  via-[#9BA5FF] via-[#62C4C3] to-[#ce8178]">
       <div className="bg-white p-3 rounded-[5px] w-full h-full">
         <div className="grid grid-cols-1 gap-y-4 lg:grid-cols-2">
           <div className="flex items-center gap-2">

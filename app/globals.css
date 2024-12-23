@@ -33,3 +33,10 @@ html {
 html {
   -ms-overflow-style: none; 
 }
+
+.gradient-text {
+  background: linear-gradient(to right, #325BC9, #BEA9DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline;
+}
