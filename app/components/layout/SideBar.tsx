@@ -1,4 +1,3 @@
-import { SidebarProps } from "@/app/types";
 import "./style.css";
 import { VscMenu } from "react-icons/vsc";
 import { AiOutlineHome } from "react-icons/ai";
@@ -12,6 +11,7 @@ import { MdOutlineSettingsPhone } from "react-icons/md";
 import { PiDoorOpenDuotone, PiFolders } from "react-icons/pi";
 import { TbUserQuestion } from "react-icons/tb";
 import { BiUser, BiExpandVertical } from "react-icons/bi";
+import { GiSkills } from "react-icons/gi";
 import {
   GrDocumentTime,
   GrDocumentText,
@@ -19,12 +19,15 @@ import {
 } from "react-icons/gr";
 import { FiPackage } from "react-icons/fi";
 import { GiVendingMachine } from "react-icons/gi";
+import { AgentSkill } from "../AgentSkill";
+import { useState } from "react";
 
 interface IShowMenuIcon {
   show: boolean;
 }
 export const SideBar = ({ show }: IShowMenuIcon) => {
   const [api, contextHolder] = notification.useNotification();
+  const [openAgentModal, setOpenAgentModal] = useState(false);
 
   const openNotification = () => {
     api.info({
@@ -35,14 +38,19 @@ export const SideBar = ({ show }: IShowMenuIcon) => {
   };
   return (
     <>
-      {" "}
+      <AgentSkill
+        open={openAgentModal}
+        handleClose={() => setOpenAgentModal(false)}
+      />
       {contextHolder}
       <div
         className={`h-screen shadow-sm overflow-y-auto pb-14 pt-2  bg-[#EFEFEF] border-r text-[#2C445D] sidebar w-[168px]`}
       >
-       {show && <div className="px-2">
-          <VscMenu className="cursor-pointer hover:text-[#325BC9]" />
-        </div>}
+        {show && (
+          <div className="px-2">
+            <VscMenu className="cursor-pointer hover:text-[#325BC9]" />
+          </div>
+        )}
 
         <div className="navLinkWrap mt-4" onClick={openNotification}>
           <div className="navLink">
@@ -106,6 +114,12 @@ export const SideBar = ({ show }: IShowMenuIcon) => {
         <div className="navLinkWrap" onClick={openNotification}>
           <div className="navLink">
             <TbUserQuestion className="navIcon" /> <span>Competitors</span>
+          </div>
+        </div>
+        <h2>Agent Skill</h2>
+        <div className="navLinkWrap" onClick={() => setOpenAgentModal(true)}>
+          <div className="navLink">
+            <GiSkills className="navIcon" /> <span>Agent skill</span>
           </div>
         </div>
 
