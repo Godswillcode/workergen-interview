@@ -37,7 +37,7 @@ export const LeadTable = () => {
       title: "Name",
       dataIndex: "name",
       key: "name",
-      render: (_, val) => <a className="text-[#3569a9]" onClick={() => setSelectedLead(val)}>{val.name}</a>,
+      render: (_, val) => <a className="text-[#3569a9]" onClick={() => handleGetLead(val)}>{val.name}</a>,
 
     },
     {
