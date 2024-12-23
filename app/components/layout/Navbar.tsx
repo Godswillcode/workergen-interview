@@ -21,9 +21,10 @@ import { SideBar } from "./SideBar";
 
 
 export interface toggleViewProps {
+  showChartView: string;
   setShowChartView: (showChartView: string) => void;
 }
-export const Navbar = ({setShowChartView}: toggleViewProps ) => {
+export const Navbar = ({setShowChartView, showChartView}: toggleViewProps ) => {
   const [openDrawer, setOpenDrawer] = useState(false);
   const quickStyle =
     "flex items-center hover:text-[#325BC9] gap-[4px] cursor-pointer";
@@ -86,11 +87,11 @@ export const Navbar = ({setShowChartView}: toggleViewProps ) => {
         </div>
 
         <div className="lg:flex hidden items-center gap-3 ">
-          <div className={quickStyle} onClick={() => setShowChartView("showChat")}>
+          <div className={showChartView === "showChat" ? "flex items-center text-[#325BC9] gap-[4px] cursor-pointer" : quickStyle} onClick={() => setShowChartView("showChat")}>
             <TbGraph size={15} />
             <span>Show chart</span>
           </div>
-          <div className={quickStyle} onClick={() => setShowChartView("focusedView")}>
+          <div className={showChartView === "focusedView" ? "flex items-center text-[#325BC9] gap-[4px] cursor-pointer" : quickStyle} onClick={() => setShowChartView("focusedView")}>
             <TfiMenuAlt />
             <span>Focused view</span>
           </div>

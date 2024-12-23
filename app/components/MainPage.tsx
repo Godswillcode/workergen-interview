@@ -10,7 +10,7 @@ export const MainPage = () => {
     const [showChartView, setShowChartView] = useState("focusedView")
   return (
     <div className="px-2 mt-3">
-      <Navbar setShowChartView={setShowChartView}/>
+      <Navbar showChartView={showChartView} setShowChartView={setShowChartView}/>
       <div>
        {showChartView === "focusedView" ?  <Analysis/> : <BarChart /> }
         
