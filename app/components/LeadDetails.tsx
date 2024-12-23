@@ -7,12 +7,14 @@ import userAvatar from ".././images/userAvatar.png";
 import linkedInLogo from ".././images/linkedinLogo.png";
 import { BsStars } from "react-icons/bs";
 import { MdOutlineModeEdit } from "react-icons/md";
-import { AiOutlineSend } from "react-icons/ai";
+import { AiOutlineSend, AiOutlineLike, AiOutlineDislike } from "react-icons/ai";
 import value from ".././images/value.png";
 import decision from ".././images/decision.png";
 import intent from ".././images/intent.png";
 import lock from ".././images/lock.png";
 import saleLogo from ".././images/salesLogo.png";
+import { IoIosArrowDown } from "react-icons/io";
+import sliderDot from ".././images/CaroselLine.png";
 
 interface IProps extends IModalProp {
   data?: leadProps;
@@ -25,7 +27,7 @@ export const LeadDetails = ({ open, handleClose, data }: IProps) => {
       onCancel={() => handleClose()}
       footer={null}
       style={{
-        top: 90,
+        top: 10,
         borderRadius: "8px",
         padding: "2px",
         background: "linear-gradient(to right, #9BA5FF, #ce8178, #62C4C3)",
@@ -163,22 +165,54 @@ export const LeadDetails = ({ open, handleClose, data }: IProps) => {
             </div>
           </div>
 
-          <div className="flex justify-between mt-3">
-               <div className="flex items-center gap-2">
-                <div className="rounded border p-1 bg-[#F1F5FF]">
-                  <Image src={lock} alt="lock" className="h-4 w-4"/>
-                </div>
-                  <button className="rounded gap-2 flex items-center border py-[2.5px] px-[6px] bg-[#F1F5FF]">
-                    <span>1</span>
-                    <Image src={saleLogo} alt="sales" className="h-4 w-4"/>
-                    <span>D365 Sales</span>
-                  </button>
-                <button className="rounded border py-[2.5px] px-[6px] bg-[#F1F5FF]">+2</button>
-               </div>
+          <div className="flex flex-wrap gap-y-2 justify-between mt-3">
+            <div className="flex items-center gap-2">
+              <div className="rounded border p-1 bg-[#F1F5FF]">
+                <Image src={lock} alt="lock" className="h-4 w-4" />
+              </div>
+              <button className="rounded gap-2 flex items-center border py-[2.5px] px-[6px] bg-[#F1F5FF]">
+                <span>1</span>
+                <Image src={saleLogo} alt="sales" className="h-4 w-4" />
+                <span>D365 Sales</span>
+              </button>
+              <button className="rounded border py-[2.5px] px-[6px] bg-[#F1F5FF]">
+                +2
+              </button>
+            </div>
 
-               <div>
-                last
-               </div>
+            <div className="flex items-center gap-2">
+              <div className="bg-[#F1F5FF] rounded-md py-1 px-2">
+                AI-generated content may be incorrect
+              </div>
+              <div className="flex gap-2">
+                <AiOutlineLike size={13} />
+                <AiOutlineDislike size={13} />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="rounded-md p-3 border mt-5">
+          <div className="flex justify-between">
+            <h3 className="font-medium">About {data?.name}</h3>
+            <IoIosArrowDown />
+          </div>
+
+          <p>{data?.aboutMe}</p>
+        </div>
+
+        <div className="flex items-center justify-between mt-5 flex-wrap">
+          <div className="flex gap-2">
+            <span>Showing 1 of 20</span>
+            <span>|</span>
+
+            <span className="font-medium text-[#325BC9]">Show all</span>
+          </div>
+          <Image src={sliderDot} alt="dots" height={7} />
+
+          <div className="flex gap-2">
+            <AiOutlineLike size={15} />
+            <AiOutlineDislike size={15} />
           </div>
         </div>
       </div>
