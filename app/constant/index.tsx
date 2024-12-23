@@ -1,5 +1,6 @@
 import janeImage from "../images/avatarJane.png"
 import allanImage from "../images/allanAvatar.png"
+import { StaticImageData } from "next/image";
 
 export type leadProps = {
   id: number;
@@ -11,7 +12,7 @@ export type leadProps = {
   position: string;
   whyPick: string;
   userInterest: string;
-  userImage: any;
+  userImage: string | StaticImageData;
   revenueAmount: number;
 };
 

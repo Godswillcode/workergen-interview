@@ -130,7 +130,7 @@ export const Analysis = () => {
                     </div>
                     <p>
                       Jane may be interested in upgrading expresso machine for
-                      her in store coffe shops.
+                      her in store coffee shops.
                     </p>
                   </div>
                   <p>Expand business . High buying intent</p>
@@ -233,7 +233,7 @@ export const Analysis = () => {
                         Partnership opportunity for Fabrikam
                       </h4>
                       <p className="text-gray-500">
-                        Fabrikam's . $5,000,000 . 12 days close
+                        Fabrikam&apos;s . $5,000,000 . 12 days close
                       </p>
                     </div>
                   </div>
@@ -242,7 +242,7 @@ export const Analysis = () => {
                     <div className="flex items-center gap-2">
                       <CgCalendarDates size={13} />
                       <span className="font-semibold">
-                        Prepare for me Fabrikam's Key stakeholder meeting
+                        Prepare for me Fabrikam&apos;s Key stakeholder meeting
                       </span>
                     </div>
 
@@ -254,10 +254,6 @@ export const Analysis = () => {
                     </div>
                   </div>
                 </div>
-
-                <span className="text-[#325BC9] hover:text-black cursor-pointer font-semibold">
-                  Show all key activities
-                </span>
               </div>
             </div>
           </div>
