@@ -21,7 +21,6 @@ interface IProps extends IModalProp {
 }
 
 export const LeadDetails = ({ open, handleClose, data }: IProps) => {
-
   return (
     <Modal
       open={open}
@@ -55,19 +54,14 @@ export const LeadDetails = ({ open, handleClose, data }: IProps) => {
             <div>
               <h4 className="font-semibold text-[12px]">{data?.name}</h4>
               <div className="flex items-center gap-[6px]">
-                {" "}
-                <Image
-                  src={linkedInLogo}
-                  alt="linkedin"
-                  className="h-3 w-3"
-                />{" "}
+                <Image src={linkedInLogo} alt="linkedin" className="h-3 w-3" />
                 |<p className="text-gray-500 text-[10px]">{data?.position}</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="rounded-md flex  gap-y-3 flex-col sm:flex-row  justify-between bg-gradient-to-r from-[#E9F0FD] to-[#ECECFE] p-2 mt-4">
+        <div className="rounded-md flex gap-y-3 flex-col sm:flex-row justify-between bg-gradient-to-r from-[#E9F0FD] to-[#ECECFE] p-2 mt-4">
           <div className="flex items-center gap-2">
             <BsStars color="#325BC9" />
             <span className="gradient-text">
@@ -77,12 +71,12 @@ export const LeadDetails = ({ open, handleClose, data }: IProps) => {
 
           <div className="flex items-center gap-2">
             <button className="flex group items-center gap-[4px] hover:bg-[#49495e] rounded border bg-white px-2">
-              <MdOutlineModeEdit className="group-hover:text-white" />{" "}
+              <MdOutlineModeEdit className="group-hover:text-white" />
               <span className="gradient-text">Edit</span>
             </button>
 
             <button className="flex group pb-[2px] text-white bg-gradient-to-r from-[#325BC9] to-[#8049D2] group items-center gap-[4px] rounded border px-2">
-              <AiOutlineSend />{" "}
+              <AiOutlineSend />
               <span className="group-hover:text-black">Approve and send</span>
             </button>
           </div>
@@ -111,15 +105,16 @@ export const LeadDetails = ({ open, handleClose, data }: IProps) => {
                   {data?.name} is a
                   <span className="font-medium">key decision maker</span> and
                   was browsing{" "}
-                  <span className="font-medium">'espresso machines'</span> on
-                  First Coffe's website.
+                  <span className="font-medium">&apos;espresso machines&apos;</span>{" "}
+                  on First Coffee&apos;s website.
                 </span>
                 <span className="border bg-white rounded px-1 ml-2">1</span>
               </li>
               <li>
                 <span>
-                  Multiple people at the company have reported 'slowness' during{" "}
-                  <span className="font-medium">Service request</span>{" "}
+                  Multiple people at the company have reported
+                  &apos;slowness&apos; during{" "}
+                  <span className="font-medium">Service request</span>
                 </span>
                 <span className="border bg-white rounded px-1 ml-2">2</span>
               </li>
@@ -127,10 +122,10 @@ export const LeadDetails = ({ open, handleClose, data }: IProps) => {
                 <span>
                   {data?.position} currently sees{" "}
                   <span className="font-medium">
-                    ${data?.revenueAmount}m in revenue{" "}
-                  </span>
-                  from their in store coffee shops.
-                </span>{" "}
+                    ${data?.revenueAmount}m in revenue
+                  </span>{" "}
+                  from their in-store coffee shops.
+                </span>
                 <span className="border bg-white rounded px-1 ml-2">3</span>
               </li>
             </ul>

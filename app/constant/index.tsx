@@ -11,7 +11,7 @@ export type leadProps = {
   position: string;
   whyPick: string;
   userInterest: string;
-  userImage: string | any;
+  userImage: any;
   revenueAmount: number;
 };
 

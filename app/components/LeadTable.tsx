@@ -111,7 +111,7 @@ export const LeadTable = () => {
         columns={columns}
         dataSource={searchFilteredData || []}
         scroll={{ x: 500 }}
-        pagination={{ pageSize: 10 }}
+        pagination={{ pageSize: 7 }}
         rowKey="id"
       />
     </div>

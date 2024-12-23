@@ -3,7 +3,6 @@
 import { Analysis } from "./Analysis";
 import { LeadTable } from "./LeadTable";
 import { Navbar } from "./layout/Navbar";
-import { SidebarRight } from "./layout/SidebarRight";
 
 export const MainPage = () => {
   return (
