@@ -22,3 +22,14 @@ body {
   background: var(--background);
   font-family: "Poppins", sans-serif;
 }
+
+html::-webkit-scrollbar {
+  display: none;
+}
+html {
+  scrollbar-width: none; /* For Firefox */
+}
+
+html {
+  -ms-overflow-style: none; 
+}

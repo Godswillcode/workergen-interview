@@ -20,7 +20,7 @@ export default function Home() {
           <MainPage />
         </div>
         <div className={`w-[3rem] overflow-hidden lg:flex hidden`}>
-          <SidebarRight />
+          {/* <SidebarRight /> */}
         </div>
       </div>
     </div>
