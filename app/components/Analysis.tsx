@@ -21,6 +21,7 @@ export const Analysis = () => {
   const handleOpenDetails = (val: "jane" | "allan") => {
     setOpenDetails(true);
     setDictateUser(val);
+    // yess
   };
 
   return (
