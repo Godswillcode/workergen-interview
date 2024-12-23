@@ -1,7 +1,13 @@
+import { leadProps } from "../constant";
 import { IModalProp } from "../types";
 import { Modal } from "antd";
 
-export const LeadDetails = ({ open, handleClose }: IModalProp) => {
+interface IProps extends IModalProp {
+    data?: leadProps;
+  }
+export const LeadDetails = ({ open, handleClose, data }: IProps) => {
+    console.log(data);
+    
   return (
     <Modal
       open={open}
